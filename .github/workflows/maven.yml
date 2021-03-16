@@ -1,0 +1,24 @@
+# Этот рабочий процесс создаст проект Java с Maven
+# Для получения дополнительной информации см .: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+имя : Java CI с Maven
+
+на :
+  нажать :
+    ветки : [master]
+  pull_request :
+    ветки : [master]
+
+вакансии :
+  сборка :
+
+    работает : ubuntu-latest
+
+    шаги :
+      - использует : actions / checkout @ v2
+      - имя : Настроить JDK 11
+        использует : действия / setup-java @ v1
+        с :
+          java-версия : 11
+      - имя : Сборка с Maven
+        запустить : mvn -B package --file pom.xml
