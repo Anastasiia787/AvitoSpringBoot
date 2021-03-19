@@ -7,7 +7,6 @@ import lombok.Data;
 @Data
 public class Flat {
     private long id;
-    private String url;
     private String image;
     private int numberOfRooms;
     private double area;
@@ -23,4 +22,5 @@ public class Flat {
     private String realEstateAgency;
     private boolean liked;
     private long created;
+    private boolean removed;
 }
