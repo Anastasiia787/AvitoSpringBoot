@@ -1,0 +1,28 @@
+###
+
+GET http://localhost:8080/flats
+
+###
+
+GET http://localhost:8080/flats
+
+###
+
+POST http://localhost:8080/flats
+
+{
+"url": "http://....",
+"image": "http://...",
+"residentialComplex": "ЖК 'Казань 21 век'",
+"address": "пр-т Альберта Камалеева, д.32Б",
+"district": "Советский",
+"numberOfRooms": "1",
+"area": "33",
+"floor": "17",
+"totalFloor": "19",
+"metroStation": "Метро Горки",
+"price":"4350000"
+"realEstateAgency": "Агенство недвижимости Ключ"
+}
+
+

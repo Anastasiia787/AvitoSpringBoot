@@ -12,18 +12,20 @@ public class FlatController {
    private FlatManager manager = new FlatManager();
 
    @GetMapping("/flats")
-    public ArrayList<Flat> getAll() {
-       return manager.getAll();
+   public ArrayList<Flat> getAll(){
+      return manager.getAll();
    }
+
    @GetMapping("/flats/{id}")
-   public Flat getById(@PathVariable long id){
+   public Flat getById(@PathVariable long id) {
       return manager.getById(id);
    }
 
    @PostMapping("/flats")
-   public Flat create(@RequestBody FlatCreate dto) {
-       return manager.register(dto);
+   public Flat create(@RequestBody FlatCreate dto){
+      return manager.register(dto);
    }
+
 
 
 }
