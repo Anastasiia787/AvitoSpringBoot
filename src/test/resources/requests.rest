@@ -4,11 +4,12 @@ GET http://localhost:8080/flats
 
 ###
 
-GET http://localhost:8080/flats
+GET http://localhost:8080/flats/1
 
 ###
 
 POST http://localhost:8080/flats
+
 
 {
 "url": "http://....",
@@ -21,8 +22,44 @@ POST http://localhost:8080/flats
 "floor": "17",
 "totalFloor": "19",
 "metroStation": "Метро Горки",
-"price":"4350000"
+"price": "4350000",
 "realEstateAgency": "Агенство недвижимости Ключ"
 }
+
+###
+
+POST http://localhost:8080/flats
+
+{
+"url": "http://....",
+"image": "http://...",
+"residentialComplex": "ЖК Жилой дом",
+"address": "ул.К.Маркса,д.39А",
+"district": "Вахитовский",
+"numberOfRooms": "3",
+"area": "132",
+"floor": "4",
+"totalFloor": "5",
+"metroStation": "Метро Площадь Тукая",
+"price": "21500000",
+"realEstateAgency": "Агенство недвижимости Ключ"
+}
+
+###
+
+PUT http://localhost:8080/flats/1
+
+{
+"image": "http://...",
+"address": "Пушкина",
+"numberOfRooms": "3",
+"area": "32.3",
+"price": "2000000"
+}
+
+###
+
+DELETE http://localhost:8080/flats/1
+
 
 

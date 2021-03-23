@@ -3,6 +3,7 @@ package tech.itpark.avito.controller;
 import org.springframework.web.bind.annotation.*;
 import tech.itpark.avito.domain.Flat;
 import tech.itpark.avito.domain.FlatCreate;
+import tech.itpark.avito.domain.FlatUpdate;
 import tech.itpark.avito.manager.FlatManager;
 
 import java.util.ArrayList;
@@ -24,6 +25,16 @@ public class FlatController {
    @PostMapping("/flats")
    public Flat create(@RequestBody FlatCreate dto){
       return manager.register(dto);
+   }
+
+   @PutMapping("/flats/{id}")
+   public Flat updateById(@PathVariable long id, @RequestBody FlatUpdate dto){
+      return manager.updateById(id, dto);
+   }
+
+   @DeleteMapping("/flats{id}")
+   public void removeById(@PathVariable long id){
+      manager.removeById(id);
    }
 
 

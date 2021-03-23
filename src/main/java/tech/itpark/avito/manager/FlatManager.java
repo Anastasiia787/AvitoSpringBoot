@@ -3,6 +3,7 @@ package tech.itpark.avito.manager;
 
 import tech.itpark.avito.domain.Flat;
 import tech.itpark.avito.domain.FlatCreate;
+import tech.itpark.avito.domain.FlatUpdate;
 
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -47,5 +48,40 @@ public class FlatManager {
     return null;
     }
 
+    public Flat updateById(long id, FlatUpdate dto) {
+        for (Flat flat : flats) {
+            if(flat.getId() == id) {
+                flat.setImage(dto.getImage());
+                flat.setAddress(dto.getAddress());
+                flat.setNumberOfRooms(dto.getNumberOfRooms());
+                flat.setArea(dto.getArea());
+                flat.setFloor(dto.getFloor());
+                flat.setPrice(dto.getPrice());
+                return flat;
+
+            }
+        }
+        return null;
+    }
+
+    public void removeById(long id) {
+        for (Flat flat : flats) {
+            if(flat.getId() == id){
+                flat.setRemoved(true);
+            }
+        }
+    }
+
+    public ArrayList<Flat> searchByPrice(int minPrice, int maxPrice) {
+        ArrayList<Flat> search = new ArrayList<>();
+        for (Flat flat : flats) {
+            if (flat.getPrice() >= minPrice &&
+                    flat.getPrice() <= maxPrice
+            ) {
+                search.add(flat);
+            }
+        }
+        return search;
+    }
 }
 
