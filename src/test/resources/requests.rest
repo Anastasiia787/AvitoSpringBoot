@@ -9,7 +9,7 @@ GET http://localhost:8080/flats/1
 ###
 
 POST http://localhost:8080/flats
-
+Contetnt-Type: application/json
 
 {
 "url": "http://....",
@@ -29,6 +29,7 @@ POST http://localhost:8080/flats
 ###
 
 POST http://localhost:8080/flats
+Contetnt-Type: application/json
 
 {
 "url": "http://....",
@@ -48,6 +49,7 @@ POST http://localhost:8080/flats
 ###
 
 PUT http://localhost:8080/flats/1
+Contetnt-Type: application/json
 
 {
 "image": "http://...",
