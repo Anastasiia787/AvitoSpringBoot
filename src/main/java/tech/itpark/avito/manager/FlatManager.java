@@ -79,10 +79,10 @@ public class FlatManager {
 
     public void removeById(long id) {
         for (Flat flat : flats) {
-            if(flat.getId() == id){
+            if (flat.getId() == id) {
                 flat.setRemoved(true);
             }
-        }
+
     }
 }
 
