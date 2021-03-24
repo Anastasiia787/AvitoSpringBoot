@@ -82,7 +82,7 @@ public class FlatManager {
             if (flat.getId() == id) {
                 flat.setRemoved(true);
             }
-        }
+
 
     }
 }
