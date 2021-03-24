@@ -13,7 +13,6 @@ public class FlatManager {
     private ArrayList<Flat> flats = new ArrayList<>();
 
     public ArrayList<Flat> getAll() {
-
         return flats;
     }
 
@@ -71,7 +70,6 @@ public class FlatManager {
                 flat.setFloor(dto.getFloor());
                 flat.setPrice(dto.getPrice());
                 return flat;
-
             }
         }
         return null;
@@ -82,7 +80,7 @@ public class FlatManager {
             if (flat.getId() == id) {
                 flat.setRemoved(true);
             }
-
+        }
 
     }
 }
