@@ -8,6 +8,15 @@ GET https://flats-avito.herokuapp.com/flats/1
 
 ###
 
+GET https://flats-avito.herokuapp.com/flats/search/minPrice
+
+###
+
+GET https://flats-avito.herokuapp.com/flats/search/maxPrice
+
+
+###
+
 POST https://flats-avito.herokuapp.com/flats
 Content-Type: application/json
 
@@ -66,7 +75,7 @@ Content-Type: application/json
 
 ###
 
-PUT https://flats-avito.herokuapp.com/flats/2
+PUT https://flats-avito.herokuapp.com/flats/1
 Content-Type: application/json
 
 {

@@ -22,6 +22,11 @@ public class FlatController {
       return manager.getById(id);
    }
 
+   @GetMapping("/flats/search/{minPrice, maxPrice}")
+   public ArrayList<Flat> searchByPrice(@RequestParam int minPrice, @RequestParam int maxPrice) {
+      return manager.searchByPrice(minPrice,maxPrice);
+   }
+
    @PostMapping("/flats")
    public Flat create(@RequestBody FlatCreate dto){
       return manager.register(dto);
