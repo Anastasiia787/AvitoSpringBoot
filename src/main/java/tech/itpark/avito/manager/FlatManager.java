@@ -64,10 +64,6 @@ public class FlatManager {
         for (Flat flat : flats) {
             if(flat.getId() == id) {
                 flat.setImage(dto.getImage());
-                flat.setAddress(dto.getAddress());
-                flat.setNumberOfRooms(dto.getNumberOfRooms());
-                flat.setArea(dto.getArea());
-                flat.setFloor(dto.getFloor());
                 flat.setPrice(dto.getPrice());
                 return flat;
             }
@@ -78,7 +74,7 @@ public class FlatManager {
     public void removeById(long id) {
         for (Flat flat : flats) {
             if (flat.getId() == id) {
-                flat.setRemoved(true);
+                flat.setRemoved(true) ;
             }
         }
 

@@ -32,7 +32,7 @@ public class FlatController {
       return manager.updateById(id, dto);
    }
 
-   @DeleteMapping("/flats{id}")
+   @DeleteMapping("/flats/{id}")
    public void removeById(@PathVariable long id){
       manager.removeById(id);
    }
