@@ -82,7 +82,7 @@ Content-Type: application/json
 ###
 
 DELETE https://flats-avito.herokuapp.com/flats/1
-
+Content-Type: application/json
 
 
 
