@@ -8,11 +8,7 @@ GET https://flats-avito.herokuapp.com/flats/1
 
 ###
 
-GET https://flats-avito.herokuapp.com/flats/search/minPrice
-
-###
-
-GET https://flats-avito.herokuapp.com/flats/search/maxPrice
+GET https://flats-avito.herokuapp.com/flats/search?minPrice=4060000&maxPrice=21500000
 
 
 ###
@@ -86,7 +82,7 @@ Content-Type: application/json
 ###
 
 DELETE https://flats-avito.herokuapp.com/flats/1
-Content-Type: application/json
+
 
 
 

@@ -22,7 +22,7 @@ public class FlatController {
       return manager.getById(id);
    }
 
-   @GetMapping("/flats/search/{minPrice, maxPrice}")
+   @GetMapping("/flats/search")
    public ArrayList<Flat> searchByPrice(@RequestParam int minPrice, @RequestParam int maxPrice) {
       return manager.searchByPrice(minPrice,maxPrice);
    }
